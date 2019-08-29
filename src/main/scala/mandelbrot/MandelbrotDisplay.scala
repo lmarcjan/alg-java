@@ -4,7 +4,6 @@ import scala.collection.mutable
 
 class MandelbrotDisplay(points: mutable.Map[(Int, Int), Int], height: Int,
                         width: Int, maxIterations: Int) extends JFrame {
-  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
   setPreferredSize(new Dimension(height, width))
   pack
   setResizable(false)

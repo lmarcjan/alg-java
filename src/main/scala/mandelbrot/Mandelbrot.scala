@@ -21,7 +21,7 @@ object Mandelbrot extends App {
     def receive = {
       case MandelbrotResult(elements, duration) =>
         println("completed in %s!".format(duration))
-        context.system.shutdown()
+        context.system.terminate()
         new MandelbrotDisplay(elements, canvasHeight, canvasWidth, maxIterations)
     }
   }

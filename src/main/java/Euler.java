@@ -16,12 +16,12 @@ public class Euler {
 
 	public Euler(Map<Integer, List<Integer>> we) {
 		this.Sasiedzi = we;
-		this.SasiedziR = new HashMap<Integer, List<Integer>>();		
-		this.Stos = new HashMap<Integer, Stack<Integer>>();
-		this.Odwiedzony = new HashMap<Integer, Boolean>();
+		this.SasiedziR = new HashMap<>();
+		this.Stos = new HashMap<>();
+		this.Odwiedzony = new HashMap<>();
 		for (int v : Sasiedzi.keySet()) {
-			SasiedziR.put(v, new ArrayList<Integer>());
-			Stos.put(v, new Stack<Integer>());
+			SasiedziR.put(v, new ArrayList<>());
+			Stos.put(v, new Stack<>());
 			Odwiedzony.put(v, false);
 		}
 		for (int v : Sasiedzi.keySet()) {		
@@ -37,7 +37,7 @@ public class Euler {
 		Odwiedzony.put(v, true);
 		for (int w : SasiedziR.get(v)) {
 			Stos.get(w).push(v);
-			if (Odwiedzony.get(w)==false) {
+			if (!Odwiedzony.get(w)) {
 				W_glab(w);
 			}
 		}
@@ -56,7 +56,7 @@ public class Euler {
 		int n = Integer.parseInt(reader.readLine());
 		Map<Integer, List<Integer>> we = new HashMap<Integer, List<Integer>>();
 		for (int v = 1; v <= n; v++) {
-			we.put(v, new ArrayList<Integer>());
+			we.put(v, new ArrayList<>());
 		}
 		int m = Integer.parseInt(reader.readLine());
 		for (int i = 0; i < m; i++) {

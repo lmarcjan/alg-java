@@ -11,7 +11,7 @@ public class StableRoommates {
         Map<Integer, List<Integer>> table;
 
         public Matching(Map<Integer, List<Integer>> table) {
-            this.table = new HashMap<Integer, List<Integer>>();
+            this.table = new HashMap<>();
             for (Entry<Integer, List<Integer>> e : table.entrySet()) {
                 this.table.put(e.getKey(), new ArrayList<Integer>());
                 this.table.get(e.getKey()).addAll(e.getValue());

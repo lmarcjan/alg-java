@@ -72,7 +72,7 @@ public class Prim {
 		int n = Integer.parseInt(reader.readLine());
 		Map<Integer, Set<Edge>> we = new HashMap<Integer, Set<Edge>>();
 		for (int v = 1; v <= n; v++) {
-			we.put(v, new HashSet<Edge>());
+			we.put(v, new HashSet<>());
 		}
 		int m = Integer.parseInt(reader.readLine());
 		for (int i = 0; i < m; i++) {

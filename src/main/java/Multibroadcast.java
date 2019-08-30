@@ -10,8 +10,8 @@ public class Multibroadcast {
     private int t;
     private int v0;
     private Map<Integer, Boolean> L = new HashMap<Integer, Boolean>();
-    private Map<Integer, int[]> T = new HashMap<Integer, int[]>();
-    private Map<Integer, int[]> M = new HashMap<Integer, int[]>();
+    private Map<Integer, int[]> T = new HashMap<>();
+    private Map<Integer, int[]> M = new HashMap<>();
 
     public Multibroadcast(Map<Integer, List<Integer>> we, int n, int k) {
         this.g = we;

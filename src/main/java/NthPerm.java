@@ -1,15 +1,12 @@
 public class NthPerm {
 
-    private static int[] fact;
-    private static int[] perm;
-
     private static void ithPermutation(int n, int i) {
 
         // fix
         n = n + 1;
 
-        fact = new int[n];
-        perm = new int[n];
+        int[] fact = new int[n];
+        int[] perm = new int[n];
         int j, k = 0;
 
         // compute factorial numbers

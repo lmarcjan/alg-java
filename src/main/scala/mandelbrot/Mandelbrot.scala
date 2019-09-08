@@ -17,10 +17,10 @@ object Mandelbrot extends App {
   val canvasHeight: Int = 500
   val maxIterations: Int = 300
 
-  class ResultHandler extends Actor {
+  class ResultHandler extends Actor with ActorLogging {
     def receive = {
       case MandelbrotResult(elements, duration) =>
-        println("completed in %s!".format(duration))
+        log.debug("completed in %s!".format(duration))
         context.system.terminate()
         new MandelbrotDisplay(elements, canvasHeight, canvasWidth, maxIterations)
     }
